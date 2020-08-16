@@ -11,7 +11,7 @@ const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAg
     finalMessage = 'Nice, you win, oh well...';
     playable = false;
   } else if (checkResult(correctLetters, wrongLetters, selectedWord) === 'lose') {
-    finalMessage = 'I feel bad for you brain cells';
+    finalMessage = 'I feel bad for your brain cells';
     finalMessageRevealWord = `The word was "${selectedWord}", even a 9 year old can win this`;
     playable = false
   }
