@@ -13,8 +13,6 @@ export const AppInner = styled.div`
   max-width: 800px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
 `
 
@@ -26,9 +24,16 @@ export const GameContainer = styled.div`
   width: 450px;
 `
 
+export const HeaderStyle = styled.div`
+  h1 {
+    color: #222931;
+  }
+  color: #393F45;
+`
+
 export const FigureContainer = styled.svg`
   fill: transparent;
-  stroke: #fff;
+  stroke: #41444A;
   stroke-width: 4px;
   stroke-linecap: round;
 `
@@ -40,6 +45,7 @@ export const WrongLettersContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: right;
+  color: #41444A;
   p {
     margin: 0 0 5px;
   }
@@ -57,7 +63,7 @@ export const WordContainer = styled.div`
 `
 
 export const Letter = styled.span`
-  border-bottom: 3px solid #2980b9;
+  border-bottom: 3px solid #31E0C4;
   display: inline-flex;
   font-size: 30px;
   align-items: center;
@@ -65,6 +71,7 @@ export const Letter = styled.span`
   margin: 0 3px;
   height: 50px;
   width: 20px;
+  color: #393F45;
 `
 
 export const PopupContainer = styled.div`
@@ -80,15 +87,18 @@ export const PopupContainer = styled.div`
 `
 
 export const PopupMessage = styled.div`
-  background: #2980b9;
+  background: #31E0C4;
+  h2 {
+    color: #393F45;
+  }
   border-radius: 5px;
   box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
   button {
     cursor: pointer;
-    background-color: #fff;
-    color: #2980b9;
+    background-color: #F4F6FE;
+    color: #31E0C4;
     border: 0;
     margin-top: 20px;
     padding: 12px 20px;

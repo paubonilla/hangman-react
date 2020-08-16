@@ -1,5 +1,5 @@
 import React from 'react'
-import { WordContainer, Letter } from '../styled'
+import { WordContainer, Letter } from '../../styled'
 
 function Word({ selectedWord, correctLetters }) {
   return (

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Header from './components/Header';
-import Figure from './components/Figure';
-import WrongLetters from './components/WrongLetters';
-import Word from './components/Word';
-import Notification from './components/Notification';
-import Popup from './components/Popup';
+import Header from './components/Header/Header';
+import Figure from './components/Figure/Figure';
+import WrongLetters from './components/WrongLetters/WrongLetters';
+import Word from './components/Word/Word';
+import Notification from './components/Notification/Notification';
+import Popup from './components/Popup/Popup';
 import { showNotification as show } from './helpers'
 import './App.css';
 import { AppContainer, AppInner, GameContainer } from './styled';

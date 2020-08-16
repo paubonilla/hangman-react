@@ -1,9 +1,9 @@
 import React from 'react'
-import { WrongLettersContainer } from '../styled'
+import { WrongLettersContainer } from '../../styled'
 
 function WrongLetters({ wrongLetters }) {
   return (
-    <WrongLettersContainer className="wrong-letters-container">
+    <WrongLettersContainer>
       <div>
         {wrongLetters.length > 0 && <p>Wrong </p>}
         {wrongLetters

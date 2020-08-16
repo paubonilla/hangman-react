@@ -1,5 +1,5 @@
 import React from 'react'
-import { FigureContainer } from '../styled'
+import { FigureContainer } from '../../styled'
 
 function Figure({ wrongLetters }) {
   const errors = wrongLetters.length;

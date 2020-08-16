@@ -1,5 +1,5 @@
 import React from 'react'
-import { NotificationContainer } from '../styled'
+import { NotificationContainer } from '../../styled'
 
 function Notification({ showNotification }) {
   return (
