@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import { checkResult } from '../helpers'
+import { PopupContainer, PopupMessage } from '../styled'
 
-const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable }) => {
+const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAgain }) => {
   let finalMessage = '';
   let finalMessageRevealWord = '';
   let playable = true;
@@ -18,13 +19,15 @@ const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable }) => {
   useEffect(() => setPlayable(playable));
 
   return (
-    <div className="popup-container" style={finalMessage !== '' ? { display: 'flex' } : {}}>
-      <div className="popup">
+    <PopupContainer style={finalMessage !== '' ? { display: 'flex' } : {}}>
+      <PopupMessage>
         <h2>{finalMessage}</h2>
         <h3>{finalMessageRevealWord}</h3>
-        <button>Play Again</button>
-      </div>
-    </div>
+        <button
+          onClick={playAgain}
+        >Play Again</button>
+      </PopupMessage>
+    </PopupContainer>
   )
 }
 

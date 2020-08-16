@@ -7,6 +7,7 @@ import Notification from './components/Notification';
 import Popup from './components/Popup';
 import { showNotification as show } from './helpers'
 import './App.css';
+import { AppContainer, AppInner, GameContainer } from './styled';
 
 const words = ['application', 'programming', 'interface', 'wizard', 'bata'];
 let selectedWord = words[Math.floor(Math.random() * words.length)];
@@ -53,31 +54,33 @@ function App() {
   }
 
   return (
-    <>
-      <Header />
-      <div className="game-container">
-        <Figure
-          wrongLetters={wrongLetters}
-        />
-        <WrongLetters
-          wrongLetters={wrongLetters}
-        />
-        <Word
-          selectedWord={selectedWord}
+    <AppContainer>
+      <AppInner>
+        <Header />
+        <GameContainer>
+          <Figure
+            wrongLetters={wrongLetters}
+          />
+          <WrongLetters
+            wrongLetters={wrongLetters}
+          />
+          <Word
+            selectedWord={selectedWord}
+            correctLetters={correctLetters}
+          />
+        </GameContainer>
+        <Popup
           correctLetters={correctLetters}
+          wrongLetters={wrongLetters}
+          selectedWord={selectedWord}
+          setPlayable={setPlayable}
+          playAgain={playAgain}
         />
-      </div>
-      <Popup
-        correctLetters={correctLetters}
-        wrongLetters={wrongLetters}
-        selectedWord={selectedWord}
-        setPlayable={setPlayable}
-        playAgain={playAgain}
-      />
-      <Notification
-        showNotification={showNotification}
-      />
-    </>
+        <Notification
+          showNotification={showNotification}
+        />
+      </AppInner>
+    </AppContainer>
   );
 }
 

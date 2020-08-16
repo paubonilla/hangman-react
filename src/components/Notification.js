@@ -1,10 +1,11 @@
 import React from 'react'
+import { NotificationContainer } from '../styled'
 
 function Notification({ showNotification }) {
   return (
-    <div className={`notification-container ${showNotification ? 'show' : ''}`}>
+    <NotificationContainer className={`notification-container ${showNotification ? 'show' : ''}`}>
       <p>You have already entered this letter</p>
-    </div>
+    </NotificationContainer>
   )
 }
 

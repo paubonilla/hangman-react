@@ -1,16 +1,17 @@
 import React from 'react'
+import { WordContainer, Letter } from '../styled'
 
 function Word({ selectedWord, correctLetters }) {
   return (
-    <div className="word">
+    <WordContainer className="word">
       {selectedWord.split('').map((letter, i) => {
         return (
-          <span className="letter" key={i}>
+          <Letter className="letter" key={i}>
             {correctLetters.includes(letter) ? letter : ''}
-          </span>
+          </Letter>
         )
       })}
-    </div>
+    </WordContainer>
   )
 }
 
