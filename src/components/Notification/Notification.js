@@ -1,10 +1,12 @@
 import React from 'react'
 import { NotificationContainer } from '../../styled'
 
-function Notification({ showNotification }) {
+function Notification({ showNotification, warmNotification }) {
+  const warning = ["You have already entered this letter", "Pressing the same letter will not help you win"];
+  warmNotification = warning[Math.floor(Math.random() * warning.length)];
   return (
     <NotificationContainer className={`notification-container ${showNotification ? 'show' : ''}`}>
-      <p>You have already entered this letter</p>
+      <p>{warmNotification}</p>
     </NotificationContainer>
   )
 }

@@ -9,7 +9,18 @@ import { showNotification as show } from './helpers'
 import './App.css';
 import { AppContainer, AppInner, GameContainer } from './styled';
 
-const words = ['application', 'programming', 'interface', 'wizard', 'bata'];
+const words = [
+  'application',
+  'bamboozle',
+  'interface',
+  'pangit',
+  'programming',
+  'prototype',
+  'supercalifragilisticexpialidocious',
+  'syzygy',
+  'wizard',
+  'zenzizenzizenzic'
+];
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
 function App() {
@@ -69,15 +80,15 @@ function App() {
             correctLetters={correctLetters}
           />
         </GameContainer>
+        <Notification
+          showNotification={showNotification}
+        />
         <Popup
           correctLetters={correctLetters}
           wrongLetters={wrongLetters}
           selectedWord={selectedWord}
           setPlayable={setPlayable}
           playAgain={playAgain}
-        />
-        <Notification
-          showNotification={showNotification}
         />
       </AppInner>
     </AppContainer>

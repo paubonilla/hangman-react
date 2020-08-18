@@ -5,26 +5,29 @@ export const AppContainer = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
-  text-align: center;
 `
 
 export const AppInner = styled.div`
   width: 100%;
   max-width: 800px;
+  min-height: 75%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 auto;
 `
 
 export const GameContainer = styled.div`
-  padding: 20px 30px;
+  padding: 30px 30px;
   position: relative;
   margin: auto;
   height: 350px;
-  width: 450px;
+  width: 100%;
 `
 
 export const HeaderStyle = styled.div`
+  text-align: center;
+  margin-top: 50px;
   h1 {
     color: #222931;
   }
@@ -93,6 +96,9 @@ export const PopupMessage = styled.div`
   }
   border-radius: 5px;
   box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+  @media (max-width: 480px) {
+    margin: 20px;
+  }
   padding: 20px;
   text-align: center;
   button {
@@ -113,12 +119,13 @@ export const PopupMessage = styled.div`
 `
 
 export const NotificationContainer = styled.div`
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 10px 10px 0 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
   padding: 15px 20px;
   position: absolute;
-  bottom: -50px;
-  transition: transform 0.3s ease-in-out;
+  bottom: 15%;
+  transition: opacity 0.6s ease-in-out;
+  opacity: 0;
   p {
    margin: 0;
   }
