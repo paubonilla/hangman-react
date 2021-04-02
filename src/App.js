@@ -10,6 +10,7 @@ import './App.css';
 import { AppContainer, AppInner, GameContainer } from './styled';
 
 const words = [
+  'babu',
   'application',
   'bamboozle',
   'interface',
