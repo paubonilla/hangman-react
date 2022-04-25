@@ -5,7 +5,7 @@ function WrongLetters({ wrongLetters }) {
   return (
     <WrongLettersContainer>
       <div>
-        {wrongLetters.length > 0 && <p>Wrong </p>}
+        {wrongLetters.length > 0 && <p>I swear if you press this letters again! </p>}
         {wrongLetters
           .map((letter, i) => <span key={i}>{letter}</span>)
           .reduce((prev, curr) => prev === null ? [curr] : [prev, ', ', curr], null)}

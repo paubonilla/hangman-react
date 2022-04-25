@@ -8,7 +8,13 @@ const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAg
   let playable = true;
 
   if (checkResult(correctLetters, wrongLetters, selectedWord) === 'win') {
-    finalMessage = 'Nice, you win, oh well...';
+    const winningMessage = [
+      "Nice, you win",
+      "K, congrats!",
+      "Well at least you win this game",
+      "Lucky",
+    ];
+    finalMessage = winningMessage[Math.floor(Math.random() * winningMessage.length)];
     playable = false;
   } else if (checkResult(correctLetters, wrongLetters, selectedWord) === 'lose') {
     const sadComments = [
@@ -31,6 +37,14 @@ const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAg
   }
 
   useEffect(() => setPlayable(playable));
+  const playAgainButton = [
+    "Play Again?",
+    "OH FR?! U wanna play again?",
+    "You wanna play again? HAHAHA",
+    "Click here if you still wanna play",
+    "Dang you still wanna play?",
+    "Oh well, play again if you want...don't care"
+  ];
 
   return (
     <PopupContainer style={finalMessage !== '' ? { display: 'flex' } : {}}>
@@ -39,7 +53,7 @@ const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAg
         <h3>{finalMessageRevealWord}</h3>
         <button
           onClick={playAgain}
-        >Play Again</button>
+        >{playAgainButton[Math.floor(Math.random() * playAgainButton.length)]}</button>
       </PopupMessage>
     </PopupContainer>
   )
