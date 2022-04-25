@@ -10,17 +10,34 @@ import './App.css';
 import { AppContainer, AppInner, GameContainer } from './styled';
 
 const words = [
+  'ink',
+  'aft',
+  'ale',
+  'amp',
+  'apt',
+  'cox',
+  'eta',
+  'fax',
+  'fox',
+  'fix',
+  'easy',
+  'hard',
   'babu',
-  'application',
-  'bamboozle',
-  'interface',
+  'mars',
+  'navy',
+  'simple',
   'pangit',
-  'programming',
-  'prototype',
-  'supercalifragilisticexpialidocious',
   'syzygy',
   'wizard',
-  'zenzizenzizenzic'
+  'saturn',
+  'aviation',
+  'bamboozle',
+  'interface',
+  'prototype',
+  'application',
+  'programming',
+  'zenzizenzizenzic',
+  'supercalifragilisticexpialidocious',
 ];
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
